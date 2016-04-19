@@ -1,0 +1,58 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/services/nrel_summary_service.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/services/nrel_pv_watts_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1461109754
+  }
+}
