@@ -5,6 +5,36 @@
         1,
         null
       ],
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/models/average_retail_price_of_electricity.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/services/us_energy_information_service.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
       "/Users/Nate/turing/3module/projects/wattsumsolar/app/models/install_summary.rb": [
         1,
         1,
@@ -79,26 +109,6 @@
         null,
         null
       ],
-      "/Users/Nate/turing/3module/projects/wattsumsolar/app/services/us_energy_information_service.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/Nate/turing/3module/projects/wattsumsolar/app/controllers/application_controller.rb": [
         0,
         0,
@@ -107,6 +117,6 @@
         0
       ]
     },
-    "timestamp": 1461119227
+    "timestamp": 1461120872
   }
 }
