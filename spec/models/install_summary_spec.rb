@@ -13,7 +13,7 @@ RSpec.describe 'InstallSummary' do
   it 'returns the total number of installs for zipcode' do
     VCR.use_cassette 'install_summary' do
       service = InstallSummary.new
-      result = service.total_installs_by_zipcode(80220)
+      result = service.install_count_by_zipcode(80220)
 
       expect(result).to eq 20
     end
@@ -22,7 +22,7 @@ RSpec.describe 'InstallSummary' do
   it 'returns the total number of installs for state' do
     VCR.use_cassette 'install_summary#state' do
       service = InstallSummary.new
-      result = service.total_installs_by_state('CO')
+      result = service.install_count_by_state('CO')
 
       expect(result).to eq 2601
     end

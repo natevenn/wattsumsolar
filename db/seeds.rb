@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+class Seed
+
+  def initialize
+    generate_states
+  end
+
+  def generate_states
+    UsStates.all.each do |state|
+      State.create!(name: state.last, installs: install_count(state.last)
+    end
+  end
+
+  def install_count(state)
+    InstallSummary.new.install_count_by_state(state)
+  end
+end

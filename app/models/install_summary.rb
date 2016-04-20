@@ -10,12 +10,12 @@ class InstallSummary
     output.result.avg_cost_pw.round(2)
   end
 
-  def total_installs_by_zipcode(zipcode)
+  def install_count_by_zipcode(zipcode)
     output = service.install_summary_by_zipcode(zipcode)
     output.result.total_installs
   end
 
-  def total_installs_by_state(state)
+  def install_count_by_state(state)
     output = service.install_summary_by_state(state)
     output.result.total_installs
   end
