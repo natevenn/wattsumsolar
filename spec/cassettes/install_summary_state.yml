@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://developer.nrel.gov/api/solar/open_pv/installs/summaries?api_key=JTA78ioyrPZ2AEfxYmqa4UttsokMGxXgXI48L6rF&zipcode=80220
+    uri: https://developer.nrel.gov/api/solar/open_pv/installs/summaries?api_key=JTA78ioyrPZ2AEfxYmqa4UttsokMGxXgXI48L6rF&state=CO
     body:
       encoding: US-ASCII
       string: ''
@@ -27,15 +27,15 @@ http_interactions:
       Access-Control-Request-Method:
       - "*"
       Age:
-      - '1'
+      - '6'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 20 Apr 2016 05:31:22 GMT
+      - Wed, 20 Apr 2016 05:31:00 GMT
       Etag:
-      - W/"9873f2e96ec3f4e1a49b43939bdc1d89"
+      - W/"2f0b2f80ee82312271483bf270592aab"
       Server:
       - openresty
       Vary:
@@ -50,20 +50,20 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '995'
+      - '997'
       X-Request-Id:
-      - b9551eb0f798e52c711e22686ca7dce0
+      - e38d2a99d04f5d8b5e9ea8f8a6f6d206
       X-Runtime:
-      - '0.024000'
+      - '5.127000'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '179'
+      - '188'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"inputs":{"zipcode":"80220"},"metadata":{"version":"2.0.0","resultset":{}},"status":200,"result":{"avg_cost_cap_weight":6.784,"avg_cost_pw":6.928,"best_avg_cost_pw":6.928,"total_capacity":0.0837,"total_installs":20,"total_installs_with_cost":5}}'
+      string: '{"inputs":{"state":"CO"},"metadata":{"version":"2.0.0","resultset":{}},"status":200,"result":{"avg_cost_cap_weight":5.596,"avg_cost_pw":5.791,"best_avg_cost_pw":2.498,"total_capacity":135.1303,"total_installs":2601,"total_installs_with_cost":713}}'
     http_version: 
-  recorded_at: Wed, 20 Apr 2016 05:31:22 GMT
+  recorded_at: Wed, 20 Apr 2016 05:31:00 GMT
 recorded_with: VCR 3.0.1
