@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Tue, 19 Apr 2016 23:49:14 GMT
+      - Wed, 20 Apr 2016 01:01:06 GMT
       Etag:
       - W/"9873f2e96ec3f4e1a49b43939bdc1d89"
       Server:
@@ -50,11 +50,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '989'
+      - '999'
       X-Request-Id:
-      - c57bf73c09799cc99e3c7b3f73a0d22c
+      - 1fecb20a09930784a7899b5da5896900
       X-Runtime:
-      - '0.026000'
+      - '0.024000'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -65,5 +65,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"inputs":{"zipcode":"80220"},"metadata":{"version":"2.0.0","resultset":{}},"status":200,"result":{"avg_cost_cap_weight":6.784,"avg_cost_pw":6.928,"best_avg_cost_pw":6.928,"total_capacity":0.0837,"total_installs":20,"total_installs_with_cost":5}}'
     http_version: 
-  recorded_at: Tue, 19 Apr 2016 23:49:14 GMT
+  recorded_at: Wed, 20 Apr 2016 01:01:06 GMT
 recorded_with: VCR 3.0.1

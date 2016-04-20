@@ -13,6 +13,6 @@ class NrelSummaryService
   private
 
     def parse(response)
-      JSON.parse(response.body)
+      JSON.parse(response.body, object_class: OpenStruct)
     end
 end
