@@ -3,12 +3,13 @@
 <head>
   <title>Wattsumsolar</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
 
+  <%= javascript_include_tag 'application' %>
+<script src="http://datamaps.github.io/scripts/datamaps.usa.min.js"></script>
 </body>
 </html>

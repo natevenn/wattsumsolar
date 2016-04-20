@@ -4,7 +4,7 @@ module Api
       respond_to :json
 
       def index
-        respond_with State.all
+        respond_with State.format_data
       end
     end
   end
