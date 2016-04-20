@@ -14,11 +14,6 @@ class DatabaseUpdater
     us_states.each do |state|
       state = State.find_by(name: state.last)
       state.update(installs: install_count(state.last))
-      require "pry"
-      binding.pry
     end
   end
 end
-
-db = DatabaseUpdater.new
-db.update_states_with_install_totals
