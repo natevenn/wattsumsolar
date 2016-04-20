@@ -1,4 +1,4 @@
-class NrelSummaryService
+class NrelInstallSummaryService
   attr_reader :connection
 
   def initialize
