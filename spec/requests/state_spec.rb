@@ -14,13 +14,9 @@ RSpec.describe 'States' do
 
     expect(body.count).to eq 3
 
-    state_summary = body.map do |state|
-      [state['name'], state['installs']]
-    end
-
-    expect(state_summary).to match_array [["CO", "2601"],
-                                          ["NY", "1601"],
-                                          ["CA", "22101"]]
+    expect(body['CO']['installs']).to eq 2601
+    expect(body['NY']['installs']).to eq 1601
+    expect(body['CA']['installs']).to eq 22101
   end
 end
 
