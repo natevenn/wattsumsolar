@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-20T19:07:44-06:00">2016-04-20T19:07:44-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-21T07:51:19-06:00">2016-04-21T07:51:19-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">75.76%</span></span>
+    (<span class="covered_percent"><span class="red">77.57%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.06
+         1.23
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>99</b> relevant lines. 
-    <span class="green"><b>75</b> lines covered</span> and
+    <b>107</b> relevant lines. 
+    <span class="green"><b>83</b> lines covered</span> and
     <span class="red"><b>24</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -143,11 +143,11 @@
       <tr>
         <td class="strong"><a href="#05339f66a6069c2c13aebfc933ccacdbb4f7c6d7" class="src_link" title="app/models/state.rb">app/models/state.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>6</td>
-        <td>6</td>
+        <td>24</td>
+        <td>14</td>
+        <td>14</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -256,19 +256,19 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">62.0%</span></span>
+    (<span class="covered_percent"><span class="red">67.24%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.76
+       <span class="green">
+         1.1
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>5</b> files in total.
-    <b>50</b> relevant lines. 
-    <span class="green"><b>31</b> lines covered</span> and
+    <b>58</b> relevant lines. 
+    <span class="green"><b>39</b> lines covered</span> and
     <span class="red"><b>19</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -328,11 +328,11 @@
       <tr>
         <td class="strong"><a href="#05339f66a6069c2c13aebfc933ccacdbb4f7c6d7" class="src_link" title="app/models/state.rb">app/models/state.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>6</td>
-        <td>6</td>
+        <td>24</td>
+        <td>14</td>
+        <td>14</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.6</td>
       </tr>
       
     </tbody>
@@ -1628,8 +1628,8 @@
     <h3>app/models/state.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1691,10 +1691,10 @@
           <code class="ruby">  def rank</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="7" data-linenumber="10">
+          <span class="hits">7</span>
           
-          <code class="ruby">    &#39;highest&#39;</code>
+          <code class="ruby">    assign_ranking_category(installs)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
@@ -1704,6 +1704,78 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def assign_ranking_category(install_count)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="14">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    if install_count &gt;= 10000</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      &quot;highest&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="16">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    elsif (1000..9999).include?(install_count)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      &quot;mid_highest&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    elsif (100..999).include?(install_count)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      &quot;mid_lowest&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      &quot;lowest&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
