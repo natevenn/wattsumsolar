@@ -13,6 +13,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faraday'
 gem 'figaro'
 gem 'responders'
+gem 'd3-rails'
+gem 'topojson-rails'
+gem 'active_model_serializers', github: "rails-api/active_model_serializers"
 
 
 group :development, :test do
