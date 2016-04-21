@@ -10,7 +10,7 @@
               borderColor: '#444',
               borderWidth: 0.5
             },
-            dataUrl: 'http://localhost:3000/api/v1/install_summary.json',
+            dataUrl: window.location.pathname + 'api/v1/install_summary.json',
             data: {},
             fills: {
               'highest': '#BD3613',
@@ -20,3 +20,4 @@
               defaultFill: '#dddddd'
             }
           });
+
