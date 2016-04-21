@@ -2,9 +2,9 @@
             scope: 'usa',
             element: document.getElementById('us_map'),
             geographyConfig: {
-              highlightBorderColor: '#bada55',
+              highlightBorderColor: '#2176C7',
               popupTemplate: function(geo, data) {
-                  return "<div class='hoverinfo'><strong>" +  geo.properties.name + '<br>' + ' Total Solar Installs:' +  data.installs +  "</strong></div>";
+                  return "<div class='hoverinfo'><strong>" +  geo.properties.name + '<br>' + ' Total Solar Installs: ' +  data.installs +  "</strong></div>";
               },
               highlightOnHover: true,
               borderColor: '#444',
@@ -13,10 +13,10 @@
             dataUrl: 'http://localhost:3000/api/v1/install_summary.json',
             data: {},
             fills: {
-              'highest': '#306596',
-              'mid-highest': '#0fa0fa',
-              'mid-lowest': '#bada55',
-              'lowest': '#bada55',
+              'highest': '#BD3613',
+              'mid-highest': '#A57706',
+              'mid-lowest': '#EAE3CB',
+              'lowest': '#FCF4DC',
               defaultFill: '#dddddd'
             }
           });
