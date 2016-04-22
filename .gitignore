@@ -6,7 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-/coverage
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -15,3 +14,7 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore coverage files
+/coverage/assets
+/coverage/index.html
