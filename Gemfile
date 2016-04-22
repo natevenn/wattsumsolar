@@ -16,6 +16,7 @@ gem 'responders'
 gem 'd3-rails'
 gem 'topojson-rails'
 gem 'active_model_serializers', github: "rails-api/active_model_serializers"
+gem 'newrelic_rpm'
 
 
 group :development, :test do

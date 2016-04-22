@@ -227,6 +227,14 @@
         1,
         null
       ],
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/controllers/solar_calculator_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/Users/Nate/turing/3module/projects/wattsumsolar/app/controllers/welcome_controller.rb": [
         0,
         0,
@@ -256,6 +264,6 @@
         0
       ]
     },
-    "timestamp": 1461246679
+    "timestamp": 1461347268
   }
 }
