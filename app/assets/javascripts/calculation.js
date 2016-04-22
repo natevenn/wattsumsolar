@@ -1,7 +1,11 @@
 $(".btn").click(function(ev){
     ev.preventDefault();
+    var state        = $("#state").val();
+    console.log(state)
     var zipcode      = $("#zip").val();
     console.log(zipcode);
+    var userKwh      = $("#kwh").val();
+    console.log(userKwh)
     var roofAngle    = $("#roof-angle").val();
     console.log(roofAngle);
     var azimuthAngle = $("#azimuth-angle").val();
@@ -18,10 +22,11 @@ $(".btn").click(function(ev){
                   var ac_annual = response.outputs.ac_annual
                   console.log(ac_annual)
               });
-              $.getJSON("https://developer.nrel.gov/api/solar/open_pv/installs/summaries?api_key=JTA78ioyrPZ2AEfxYmqa4UttsokMGxXgXI48L6rF&address="
-                        + zipcode,
-                        function(response){
-                            var avg_cost = response.result.avg_cost_pw
-                            console.log(avg_cost)
-                        });
+    $.getJSON("http://api.eia.gov/series/?api_key=EC28B206A1F13B7ABC5601F247D40844&series_id=ELEC.PRICE."
+              + state + "-RES.A",
+              function(response){
+                  var avgElecCost = response['series'][0]['data'][0][1]
+                  console.log(avgElecCost)
+              })
 });
+
