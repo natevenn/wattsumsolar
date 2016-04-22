@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
+  get '/solar_calculator', to: 'solar_calculator#show'
 
   namespace :api, defaults: {format: :json} do
     namespace :v1 do

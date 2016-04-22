@@ -1,0 +1,51 @@
+<div class='col s12 m6 right-card'>
+</div>
+
+<div class='container'>
+<div class="col s12 m6 welcome">
+  <div class="welcome-form">
+    <%= form_tag('/calculator', :method => "get") do %>
+    <h5 class="welcome-text">Select your State</h5>
+
+      <div class="select state select-box">
+        <%= select_tag('state', options_for_select(@us_states)) %>
+      </div>
+
+      <div class="text zipcode">
+        <%= label_tag(:zip, "enter zipcode") %>
+        <%= text_field_tag(:zip, '') %>
+      </div>
+
+      <div class="text avg-kwh">
+        <%= label_tag(:kwh, "enter your annual kilowatt hours") %>
+        <%= text_field_tag(:kwh) %>
+      </div>
+
+      <h5 id="roof-text">Select your roof pitch</h5>
+      <div class="select roof-angle select-box">
+        <%= select_tag('roof-angle', options_for_select([['10 degrees', '10'], ['14 degrees', '14'],
+                                                        ['18 degrees', '18'], ['22 degrees', '22'],
+                                                        ['26 degrees', '26'], ['30 degrees', '30'],
+                                                        ['33 degrees', '33'], ['36 degrees', '36'],
+                                                        ['40 degrees', '40'], ['42 degrees', '42'],
+                                                        ['45 degrees', '45']])) %>
+      </div>
+
+      <h5 id="select azimuth-text">Select your azimuth angle to the sun</h5>
+      <div class="select azimuth-angle select-box">
+        <%= select_tag('azimuth-angle', options_for_select([['180 degrees south', '180']])) %>
+      </div>
+
+      <h5 id="system-size">Select your system size in kilowatts</h5>
+      <div class="select system-size select-box">
+        <%= select_tag('system', options_for_select([['1 kw', '1'], ['2 kw', '2'], ['3 kw', '3'], ['4 kw', '4']])) %>
+      </div>
+
+      <div class'submit-button'>
+      <%= submit_tag "calculate", class: "btn btn-lg btn-success btn-home green lighten-2" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+</div>
