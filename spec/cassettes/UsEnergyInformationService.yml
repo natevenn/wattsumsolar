@@ -29,13 +29,13 @@ http_interactions:
       Content-Length:
       - '739'
       Expires:
-      - Wed, 20 Apr 2016 05:31:28 GMT
+      - Sat, 23 Apr 2016 00:49:15 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 20 Apr 2016 05:31:28 GMT
+      - Sat, 23 Apr 2016 00:49:15 GMT
       Connection:
       - keep-alive
     body:
@@ -46,5 +46,5 @@ http_interactions:
         Electricity sold to residential customers; ","copyright":"None","source":"EIA,
         U.S. Energy Information Administration","iso3166":"USA-CO","geography":"USA-CO","start":"2001","end":"2015","updated":"2016-02-25T13:07:32-0500","data":[["2015",11.98],["2014",12.18],["2013",11.93],["2012",11.46],["2011",11.27],["2010",11.04],["2009",10],["2008",10.13],["2007",9.25],["2006",9.02],["2005",9.06],["2004",8.42],["2003",8.14],["2002",7.37],["2001",7.47]]}]}'
     http_version: 
-  recorded_at: Wed, 20 Apr 2016 05:31:28 GMT
+  recorded_at: Sat, 23 Apr 2016 00:49:15 GMT
 recorded_with: VCR 3.0.1

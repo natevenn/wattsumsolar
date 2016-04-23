@@ -1,22 +1,20 @@
 class InstallSummary
   attr_reader :service
 
-  def initialize
-    @service = NrelInstallSummaryService.new
+  def initialize(state)
+    @service ||= NrelInstallSummaryService.new.
+      install_summary_by_state(state)
   end
 
-  def average_price_per_watt(zipcode)
-    output = service.install_summary_by_zipcode(zipcode)
-    output.result.avg_cost_pw.round(2)
+  def install_count_by_state
+    service.result.total_installs
   end
 
-  def install_count_by_zipcode(zipcode)
-    output = service.install_summary_by_zipcode(zipcode)
-    output.result.total_installs
+  def install_price_per_watt
+    format_price(service.result.avg_cost_pw)
   end
 
-  def install_count_by_state(state)
-    output = service.install_summary_by_state(state)
-    output.result.total_installs
+  def format_price(price)
+    (price * 1000).to_i
   end
 end
