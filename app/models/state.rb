@@ -1,24 +1,17 @@
 class State < ActiveRecord::Base
+  include StateRank
 
   def self.format_data
     all.map.with_object({}) do |state, hash|
-       hash[state.name] = { 'fillKey' => state.rank, 'installs' => state.installs }
+      hash[state.name] = { 'fillKey'        => state.rank,
+                           'installs'       => state.installs,
+                           'price_per_watt' => state.price_per_watt }
     end
   end
 
-  def rank
-    assign_ranking_category(installs)
-  end
-
-  def assign_ranking_category(install_count)
-    if install_count >= 10000
-      "highest"
-    elsif (1000..9999).include?(install_count)
-      "mid_highest"
-    elsif (100..999).include?(install_count)
-      "mid_lowest"
-    else
-      "lowest"
-    end
+  def format_data_for_state
+    { name => { 'fillKey'        => rank,
+                'installs'       => installs,
+                'price_per_watt' => price_per_watt } }
   end
 end
