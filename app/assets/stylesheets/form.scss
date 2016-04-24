@@ -1,6 +1,10 @@
-.left-card {
+#left-card {
+  position: relative;
+  right: 90px;
 }
-.right-card {
+#right-card {
+  position: relative;
+  left: 120px;
 }
 
 .calculator {
@@ -28,7 +32,7 @@
   -webkit-appearance: none;
   display: block;
   padding: 1.2em 1.2em 1.2em 1.2em;
-  margin: 5px;
+  margin: 10px;
   transition: border-color 0.2s;
   border: 3px solid white;
   background: #0079c2;
@@ -61,4 +65,8 @@
 .submit-btn {
   padding-top: 20px;
 }
-
+.results {
+  padding-top: 30px;
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+}

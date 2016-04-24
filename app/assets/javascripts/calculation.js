@@ -1,8 +1,9 @@
 $(document).ready(function(){
+$('#right-card').hide()
 
     $(".btn").click(function(ev){
         ev.preventDefault();
-        $('#loaderImg').hide();
+        $('#right-card').fadeIn('slow', 0)
         var state            = $("#state").val();
         var zipcode          = 80220;
         var userKwh          = 6000;
@@ -91,32 +92,32 @@ function formatOutput(output){
 
 function renderPayoff(text){
   $(".years-to-payoff")
-  .replaceWith("<div class=years-to-payoff><h5>"
+  .replaceWith("<h5 class=years-to-payoff>"
                + text
-               + "</h5></div>"
+               + "</h5>"
               );
 }
 
 function renderSystemCost(text){
   $(".upfront-cost")
-  .replaceWith("<div class=upfront-cost><h5>"
+  .replaceWith("<h5 class=upfront-cost>"
                + text
-               + "</h5></div>"
+               + "</h5>"
               );
 }
 
 function renderOffset(text){
   $(".percentage-offset")
-  .replaceWith("<div class=percentage-offset><h5>"
+  .replaceWith("<h5 class=percentage-offset>"
                + text
-               + "</h5></div>"
+               + "</h5>"
               );
 }
 
 function renderPvOutput(text){
   $(".pv-output")
-  .replaceWith("<div class=pv-output><h5>"
+  .replaceWith("<h5 class=pv-output>"
                + text
-               + "</h5></div>"
+               + "</h5>"
               );
 }
