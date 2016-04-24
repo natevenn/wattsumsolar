@@ -16,5 +16,4 @@
 /config/application.yml
 
 # Ignore coverage files
-/coverage/assets
-/coverage/index.html
+/coverage/*

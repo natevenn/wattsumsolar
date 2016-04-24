@@ -1,7 +1,7 @@
 <div class='container row'>
 
 
-<div class="col s12 m6 left-card welcome">
+<div class="col s12 m6 welcome" id='left-card'>
   <div class="welcome-form">
     <%= form_tag('/calculator', :method => "get") do %>
     <h5 class="welcome-text">Select your State</h5>
@@ -11,13 +11,11 @@
       </div>
 
       <div class="text zipcode">
-        <%= label_tag(:zip, "enter zipcode") %>
-        <%= text_field_tag(:zip, '') %>
+        <%= text_field_tag(:zip, '', placeholder: 'zipcode') %>
       </div>
 
       <div class="text avg-kwh">
-        <%= label_tag(:kwh, "enter your annual kilowatt hours") %>
-        <%= text_field_tag(:kwh) %>
+        <%= text_field_tag(:kwh, nil, placeholder: 'enter annual kilowatt hours') %>
       </div>
 
       <h5 id="roof-text">Select your roof pitch</h5>
@@ -47,26 +45,22 @@
     <% end %>
   </div>
 </div>
-<%#<div class='col s12 m6 right-card'>%>
-  <%#<ul class="collection with-header">%>
-        <%#<li class="collection-header"><h4></h4></li>%>
-        <%#<li class="years-to-payoff"></li>%>
-        <%#<li class="upfront-cost"></li>%>
-        <%#<li class="percentage-offset"></li>%>
-      <%#</ul>%>
-<%#</div>%>
-<div class='col s12 m6 right-card'>
-  <div class='pv-output'>
-    <h5></h5>
+
+<div class='col s12 m6' id='right-card'>
+  <div class='header'>
+    <h4 id='result-header'>Results</h4>
   </div>
-  <div class='percentage-offset'>
-    <h5></h5>
+  <div class='results'>
+    <h5 class='pv-output'></h5>
   </div>
-  <div class='upfront-cost'>
-    <h5></h5>
+  <div class='results'>
+    <h5 class='percentage-offset'></h5>
   </div>
-  <div class='years-to-payoff'>
-    <h5></h5>
+  <div class='results'>
+    <h5 class='upfront-cost'></h5>
+  </div>
+  <div class='results'>
+    <h5 class='years-to-payoff'></h5>
   </div>
 </div>
 </div>
