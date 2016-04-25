@@ -75,6 +75,19 @@ function calculateYearsToPayoff(i, u) {
     count++
   }
   renderPayoff(count)
+  calculatePayoffWithTaxCredit(i, u)
+}
+
+function calculatePayoffWithTaxCredit(i, u) {
+    var afterTaxCredit = (u - Math.round(u * 0.3))
+    var count = 0
+    var total = 0
+    var apr   = 1.035
+    while (total < afterTaxCredit) {
+        total += i * Math.pow((apr), count)
+        count++
+    }
+    renderPayoffWithTaxCredit(count)
 }
 
 function calculatePercentageOffset(pvOutput, userKwh) {
@@ -90,7 +103,16 @@ function formatOutput(output){
 
 function renderPayoff(text){
   $(".years-to-payoff")
-  .replaceWith("<h5 class=years-to-payoff>Payoff Time <strong>"
+  .replaceWith("<h5 class=years-to-payoff>Payoff time <strong>"
+               + text
+               + " years"
+               + "</strong></h5>"
+              );
+}
+
+function renderPayoffWithTaxCredit(text){
+  $(".years-with-tax-credit")
+  .replaceWith("<h5 class=years-with-tax-credit>With the 30% federal tax credit<strong>"
                + text
                + " years"
                + "</strong></h5>"

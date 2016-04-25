@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 7485c8487ee60a591db500740f88699d4ba7c71c
+  revision: 0165215c95e2a3255dc2c444144319149a5fdebf
   specs:
     active_model_serializers (0.10.0.rc5)
       actionpack (>= 4.0)
@@ -58,6 +58,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    childprocess (0.5.9)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -71,6 +73,7 @@ GEM
       safe_yaml (~> 1.0.0)
     d3-rails (3.5.16)
       railties (>= 3.1)
+    database_cleaner (1.5.3)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     docile (1.1.5)
@@ -78,6 +81,7 @@ GEM
     execjs (2.6.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.10)
     figaro (1.1.1)
       thor (~> 0.14)
     globalid (0.3.6)
@@ -109,7 +113,7 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    multi_json (1.11.2)
+    multi_json (1.11.3)
     multipart-post (2.0.0)
     newrelic_rpm (3.15.1.316)
     nokogiri (1.6.7.2)
@@ -147,7 +151,7 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.4)
+    rails_stdout_logging (0.0.5)
     railties (4.2.5.1)
       actionpack (= 4.2.5.1)
       activesupport (= 4.2.5.1)
@@ -176,6 +180,7 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -187,6 +192,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    selenium-webdriver (2.53.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -215,10 +224,11 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    webmock (1.24.3)
+    webmock (1.24.6)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
+    websocket (1.2.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -231,6 +241,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   d3-rails
+  database_cleaner
   faraday
   figaro
   gon
@@ -246,6 +257,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  selenium-webdriver
   simplecov
   topojson-rails
   uglifier (>= 1.3.0)

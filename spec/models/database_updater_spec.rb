@@ -1,14 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe 'database updater' do
-  xit 'updates the states with current install totals' do
-    state = State.find_by(name: 'CO')
-    state.update(installs: 2600)
-    database_updater = DatabaseUpdater.new
-    states = database_updater.update_states_with_install_totals
-    state = State.find_by(name: 'CO')
+  it 'updates the states with current install totals' do
+    VCR.use_cassette 'update_database' do
 
-    expect(states.count).to eq 52
-    expect(state.installs).to eq 2601
+    State.find_or_create_by(name: 'CO', installs: 600, price_per_watt: 7030)
+    State.find_or_create_by(name: 'CA', installs: 300, price_per_watt: 4002)
+
+    DatabaseUpdater.update
+
+    state1 = State.find_by(name: "CO")
+    state2 = State.find_by(name: "CA")
+
+    expect(state1.installs).to eq(2601)
+    expect(state1.price_per_watt).to eq(5791)
+    expect(state2.installs).to eq(291518)
+    expect(state2.price_per_watt).to eq(6885)
+    end
   end
 end
