@@ -4,7 +4,7 @@
             geographyConfig: {
               highlightBorderColor: '#2176C7',
               popupTemplate: function(geo, data) {
-                  return "<div class='hoverinfo'><strong>" +  geo.properties.name + '<br>' + ' Solar Installs: ' +  formatNumber(data.installs) +  "</strong></div>";
+                  return "<div class='hoverinfo'>" +  geo.properties.name + '<br>' + ' Solar Installs: ' +  formatNumber(data.installs) +  "</div>";
               },
               highlightOnHover: true,
               borderColor: '#444',
