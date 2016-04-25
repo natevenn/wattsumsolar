@@ -4,6 +4,7 @@ $('#right-card').hide()
     $(".btn").click(function(ev){
         ev.preventDefault();
         $('#right-card').fadeIn('slow', 0)
+        $('.results').fadeIn('slow', 0)
         var state            = $("#state").val();
         var zipcode          = 80220;
         var userKwh          = 6000;
@@ -47,7 +48,7 @@ function calculateTotalSystemCost(userKwh, avgCostPw, systemCapacity, state) {
   var systemCost = (avgCostPw * systemCapacity)
   var toDollars = systemCost.toLocaleString()
   annualElecCost(userKwh, state, systemCost)
-  return "Your total upfront cost would be " + "$" + toDollars
+  return toDollars
 }
 
 function annualElecCost(userKwh, state, systemCost) {
@@ -65,59 +66,59 @@ function calculateAnnualCost(userKwh, avgElecCost, systemCost) {
   return 'annual electricity costs: ' + annualCost
 }
 
-
-
 function calculateYearsToPayoff(i, u) {
   var count = 0
   var total = 0
-  var apr   = 1.045
+  var apr   = 1.035
   while (total < u){
     total += i * Math.pow((apr), count)
     count++
   }
-  var countText = 'Your break even point is ' + count + ' years'
-  renderPayoff(countText)
+  renderPayoff(count)
 }
 
 function calculatePercentageOffset(pvOutput, userKwh) {
   var num = Math.round((pvOutput / userKwh) * 100)
-  return "Your percentage offset would be " + num + '%'
+  return num
 }
 
 function formatOutput(output){
   var roundOutput = Math.round(output)
-  var outputText = "Annual Ac output would be " + roundOutput + " Kilowatts"
+  var outputText = roundOutput
   renderPvOutput(outputText)
 }
 
 function renderPayoff(text){
   $(".years-to-payoff")
-  .replaceWith("<h5 class=years-to-payoff>"
+  .replaceWith("<h5 class=years-to-payoff>Payoff Time <strong>"
                + text
-               + "</h5>"
+               + " years"
+               + "</strong></h5>"
               );
 }
 
 function renderSystemCost(text){
   $(".upfront-cost")
-  .replaceWith("<h5 class=upfront-cost>"
+  .replaceWith("<h5 class=upfront-cost>Upfront cost <strong>$"
                + text
-               + "</h5>"
+               + "</strong></h5>"
               );
 }
 
 function renderOffset(text){
   $(".percentage-offset")
-  .replaceWith("<h5 class=percentage-offset>"
+  .replaceWith("<h5 class=percentage-offset>Percentage offset <strong>"
                + text
-               + "</h5>"
+               + '%'
+               + "</strong></h5>"
               );
 }
 
 function renderPvOutput(text){
   $(".pv-output")
-  .replaceWith("<h5 class=pv-output>"
+  .replaceWith("<h5 class=pv-output>Total system ac output <strong>"
                + text
-               + "</h5>"
+               + " kilowatts"
+               + "</strong></h5>"
               );
 }
