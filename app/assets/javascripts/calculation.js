@@ -4,6 +4,7 @@ $('#right-card').hide()
     $(".btn").click(function(ev){
         ev.preventDefault();
         $('#right-card').fadeIn('slow', 0)
+        $('.results').fadeIn('slow', 0)
         var state            = $("#state").val();
         var zipcode          = 80220;
         var userKwh          = 6000;
