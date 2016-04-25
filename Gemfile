@@ -16,6 +16,7 @@ gem 'responders'
 gem 'd3-rails'
 gem 'topojson-rails'
 gem 'active_model_serializers', github: "rails-api/active_model_serializers"
+gem 'selenium-webdriver'
 gem 'newrelic_rpm'
 gem 'gon'
 
@@ -32,6 +33,7 @@ end
 group :test do
   gem 'vcr'
   gem 'webmock'
+  gem 'database_cleaner'
 end
 
 group :development do
