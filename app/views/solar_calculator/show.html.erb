@@ -9,16 +9,18 @@
         <%= select_tag('state', options_for_select(@us_states)) %>
       </div>
 
-        <div class="col s12 m3 text zipcode">
-          <%= text_field_tag(:zip, '', placeholder: 'zipcode') %>
+        <div class="text zipcode">
+          <h5 class="text-select">Zipcode</h5>
+          <%= text_field_tag(:zip, nil, maxlength: 5) %>
         </div>
 
-        <div class="col s12 m5 text avg-kwh">
-          <%= text_field_tag(:kwh, nil, placeholder: 'Annual kilowatt hours') %>
+        <div class="text avg-kwh">
+          <h5 class="text-select">Annual Kilowatt Hours</h5>
+          <%= text_field_tag(:kwh) %>
         </div>
 
+      <h5 id="text-select roof-angle">Select roof pitch</h5>
       <div class="select roof-angle select-box">
-      <h5 id="text-select">Select roof pitch</h5>
         <%= select_tag('roof-angle', options_for_select([['10 degrees', '10'], ['14 degrees', '14'],
                                                         ['18 degrees', '18'], ['22 degrees', '22'],
                                                         ['26 degrees', '26'], ['30 degrees', '30'],

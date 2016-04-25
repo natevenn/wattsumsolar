@@ -6,8 +6,8 @@ $('#right-card').hide()
         $('#right-card').fadeIn('slow', 0)
         $('.results').fadeIn('slow', 0)
         var state            = $("#state").val();
-        var zipcode          = 80220;
-        var userKwh          = 6000;
+        var zipcode          = $("#zip").val();
+        var userKwh          = $("#kwh").val();
         var roofAngle        = $("#roof-angle").val();
         var azimuthAngle     = $("#azimuth-angle").val();
         var systemCapacity   = $("#system").val();
