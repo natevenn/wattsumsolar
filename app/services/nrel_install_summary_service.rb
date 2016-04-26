@@ -15,7 +15,7 @@ class NrelInstallSummaryService
   end
 
   def price_per_watt(state)
-    parse(connection.get("?state=#{state}&mindate=1420071728"))
+    parse(connection.get("?state=#{state}&mindate=07728"))
   end
 
   private

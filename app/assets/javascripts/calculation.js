@@ -3,8 +3,8 @@ $('#right-card').hide()
 
     $(".btn").click(function(ev){
         ev.preventDefault();
-        $('#right-card').fadeIn('slow', 0)
-        $('.results').fadeIn('slow', 0)
+        $('#right-card').fadeOut('slow', 0)
+        $('.results').delay(1800).fadeIn('slow', 0)
         var state            = $("#state").val();
         var zipcode          = $("#zip").val();
         var userKwh          = $("#kwh").val();
@@ -12,6 +12,7 @@ $('#right-card').hide()
         var azimuthAngle     = $("#azimuth-angle").val();
         var systemCapacity   = $("#system").val();
         var annualCost = acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state)
+        $('#right-card').delay(1000).fadeIn('slow', 0)
     });
 });
 
@@ -69,7 +70,7 @@ function calculateAnnualCost(userKwh, avgElecCost, systemCost) {
 function calculateYearsToPayoff(i, u) {
   var count = 0
   var total = 0
-  var apr   = 1.035
+  var apr   = 1.045
   while (total < u){
     total += i * Math.pow((apr), count)
     count++
@@ -82,12 +83,22 @@ function calculatePayoffWithTaxCredit(i, u) {
     var afterTaxCredit = (u - Math.round(u * 0.3))
     var count = 0
     var total = 0
-    var apr   = 1.035
+    var apr   = 1.045
     while (total < afterTaxCredit) {
         total += i * Math.pow((apr), count)
         count++
     }
     renderPayoffWithTaxCredit(count)
+}
+
+function calculatePerYearCosts(i, u) {
+  var count = 0
+  var total = 0
+  var apr   = 1.045
+  while (total < 25){
+    total += i * Math.pow((apr), count)
+    count++
+  }
 }
 
 function calculatePercentageOffset(pvOutput, userKwh) {
@@ -140,7 +151,7 @@ function renderPvOutput(text){
   $(".pv-output")
   .replaceWith("<h5 class=pv-output>Total system ac output <strong>"
                + text
-               + " kilowatts"
+               + " kilowatt hours"
                + "</strong></h5>"
               );
 }

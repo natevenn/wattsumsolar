@@ -118,6 +118,34 @@ strong {
   color: #0079c2;
 }
 
+#zipcode {
+  max-width: 23vw;
+}
+
+#kwh-div {
+  max-width: 23vw;
+}
+
+#roof-angle-div {
+  position: relative;
+  right: 10px;
+}
+
+#select-state {
+  position: relative;
+  right: 10px;
+}
+
+#azimuth-angle-div {
+  position: relative;
+  right: 10px;
+}
+
+#system-size {
+  position: relative;
+  right: 10px;
+}
+
 /*.text {*/
   /*-webkit-appearance: none;*/
   /*display: block;*/

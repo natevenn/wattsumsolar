@@ -5,22 +5,22 @@
     <%= form_tag('/calculator', :method => "get") do %>
     <h5 class="text-select">Select your State</h5>
 
-      <div class="select state select-box">
+      <div class="select state select-box" id='select-state'>
         <%= select_tag('state', options_for_select(@us_states)) %>
       </div>
 
-        <div class="text zipcode">
+        <div class="text zipcode" id='zipcode'>
           <h5 class="text-select">Zipcode</h5>
           <%= text_field_tag(:zip, nil, maxlength: 5) %>
         </div>
 
-        <div class="text avg-kwh">
+        <div class="text avg-kwh" id='kwh-div'>
           <h5 class="text-select">Annual Kilowatt Hours</h5>
           <%= text_field_tag(:kwh) %>
         </div>
 
       <h5 id="text-select roof-angle">Select roof pitch</h5>
-      <div class="select roof-angle select-box">
+      <div class="select roof-angle select-box" id="roof-angle-div">
         <%= select_tag('roof-angle', options_for_select([['10 degrees', '10'], ['14 degrees', '14'],
                                                         ['18 degrees', '18'], ['22 degrees', '22'],
                                                         ['26 degrees', '26'], ['30 degrees', '30'],
@@ -30,12 +30,12 @@
       </div>
 
       <h5 id="text-select azimuth-text">Select azimuth angle</h5>
-      <div class="select azimuth-angle select-box">
+      <div class="select azimuth-angle select-box" id="azimuth-angle-div">
         <%= select_tag('azimuth-angle', options_for_select([['180 degrees south', '180']])) %>
       </div>
 
       <h5 id="text-select system-size">Select system size</h5>
-      <div class="select system-size select-box">
+      <div class="select system-size select-box" id='system-size'>
         <%= select_tag('system', options_for_select(@system_capacity)) %>
       </div>
 
