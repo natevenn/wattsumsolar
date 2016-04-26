@@ -11,7 +11,7 @@ class InstallSummary
   end
 
   def install_price_per_watt
-    format_price(service.result.avg_cost_pw)
+    format_price(service.result.best_avg_cost_pw)
   end
 
   def format_price(price)
