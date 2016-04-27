@@ -23,19 +23,36 @@ $(document).ready(function(){
 
     $(".cancel-button").on('click', function() {
         $('#kwh-help-card').hide();
-        $('#calculator-help-card').show();
+        if ( $('#calculator-help-card').is('.inactive') ) {
+        $('#calculator-help-card').hide();
+        } else {
+            $('#calculator-help-carde').show();
+        }
     })
+
     $(".cancel-button").on('click', function() {
         $('#roof-help-card').hide();
-        $('#calculator-help-card').show();
+        if ( $('#calculator-help-card').is('.inactive') ) {
+        $('#calculator-help-card').hide();
+        } else {
+            $('#calculator-help-carde').show();
+        }
     })
     $(".cancel-button").on('click', function() {
         $('#azimuth-help-card').hide();
-        $('#calculator-help-card').show();
+        if ( $('#calculator-help-card').is('.inactive') ) {
+        $('#calculator-help-card').hide();
+        } else {
+            $('#calculator-help-carde').show();
+        }
     })
 
     $(".cancel-button").on("click", function() {
         $('#system-help-card').hide();
-        $('#calculator-help-card').show();
+        if ( $('#calculator-help-card').is('.inactive') ) {
+        $('#calculator-help-card').hide();
+        } else {
+            $('#calculator-help-carde').show();
+        }
     })
 })

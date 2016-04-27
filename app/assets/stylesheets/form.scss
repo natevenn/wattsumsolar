@@ -250,3 +250,8 @@ background-color: #0079c2;
   float: right;
   /*margin-right: 300px;*/
 }
+.inactive {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
