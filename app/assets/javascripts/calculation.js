@@ -4,9 +4,10 @@ $('#calculator-help-card').show()
 
     $(".btn").click(function(ev){
         ev.preventDefault();
-        $('#calculator-help-card').hide()
+        $('#calculator-help-card').hide().addClass('inactive')
         $('.fade-results').fadeOut('slow', 0)
         $('#right-card').fadeIn('slow', 0)
+        //$('#right-card').addClass('active')
         var state            = $("#state").val();
         var zipcode          = $("#zip").val();
         var userKwh          = $("#kwh").val();

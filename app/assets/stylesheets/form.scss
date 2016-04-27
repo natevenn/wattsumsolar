@@ -1,6 +1,7 @@
 #left-card {
   position: relative;
   right: 30px;
+  margin-top: -50px;
 }
 #right-card {
   position: relative;
@@ -23,7 +24,6 @@ background-color: #0079c2;
   height: 300px;
   background: transparent;
   position:absolute;
-
   top: 170px;
   left: 0;
   right: 0;
@@ -44,7 +44,7 @@ background-color: #0079c2;
   display: block;
   padding: 1.2em 1.2em 1.2em 1.2em;
   margin: 10px;
-  background: #0079c2;
+  background: #2196F3;
   border-radius: 5px;
   color: white;
   line-height: normal;
@@ -55,6 +55,7 @@ background-color: #0079c2;
   width: 300px;
   height: 50px;
 }
+
 .select-box {
   margin: auto;
   position: relative;
@@ -65,7 +66,7 @@ background-color: #0079c2;
   top: 15%;
 }
 .welcome-text {
-  color: #0079c2;
+  color: #2196F3;
 }
 
 .azmuith-angle {
@@ -114,38 +115,47 @@ background-color: #0079c2;
   width: 50%;
   min-width: 300px;
   height: 400px;
-  background: currentColor;
+  background: #BBDEFB;
   z-index: 15;
   display: none;
   text-align: center;
   overflow-y: scroll;
 }
 
-/*.calculation-info {*/
-  /*bottom: 15%;*/
-  /*right: 0;*/
-  /*left: 0;*/
-  /*margin: auto;*/
-  /*padding: 12px;*/
-  /*opacity: 0.65;*/
-  /*border-radius: 15px;*/
-  /*position: relative;*/
-  /*width: 50%;*/
-  /*min-width: 300px;*/
-  /*height: 400px;*/
-  /*background: #ff9100;*/
-  /*z-index: 15;*/
-  /*display: none;*/
-  /*text-align: center;*/
-  /*overflow-y: scroll;*/
-/*}*/
-
-.help-text {
-  color: white;
-  font-size: .8em;
+ .help-text .help-header {
+  font-family: 'Roboto Slab', "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1.75em;
+  margin-bottom: .4em;
 }
+.calculation-info {
+  bottom: 15%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 12px;
+  opacity: 0.80;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #FF5722;
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+  height: 400px;
+  background: #FFFFFF;
+  z-index: 15;
+  display: none;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+/*.help-text {*/
+  /*color: white;*/
+  /*font-size: .8em;*/
+/*}*/
 .help-header {
-  color: white;
+  color: #FF9800;
 }
 
 .text-select {
@@ -163,21 +173,25 @@ background-color: #0079c2;
   right: 37px;
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #info_roof {
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #info_azimuth {
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #info_system {
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #zipcode {
@@ -225,4 +239,19 @@ background-color: #0079c2;
 
 .result-box {
   display: inline;
+}
+
+.state-kwh-table {
+  text-align: center;
+}
+
+#cancel-button {
+  position: static;
+  float: right;
+  /*margin-right: 300px;*/
+}
+.inactive {
+  height: 0;
+  width: 0;
+  opacity: 0;
 }

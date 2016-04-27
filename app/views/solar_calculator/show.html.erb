@@ -16,7 +16,7 @@
 
         <div class="row" id="kwh-info-div">
           <h5 class="text-select" id="kwh-text">Annual Kilowatt Hours</h5>
-          <a class='info-link' href='#'><%= image_tag("info.png", id:"info_kwh", class:"info-logo", size: "50") %>
+          <a class='info-link' href='#'><%= image_tag("info-button.png", id:"info_kwh", class:"info-logo", size: "30") %>
         </div>
         <div class="text avg-kwh" id='kwh-div'>
           <%= text_field_tag(:kwh) %>
@@ -24,7 +24,7 @@
 
       <h5 id="text-select roof-angle">Select roof pitch</h5>
       <div class="select roof-angle select-box" id="roof-angle-div">
-            <a class='info-link' href='#'><%= image_tag("info.png", id:"info_roof", class:"info-logo", size: "50") %>
+            <a class='info-link' href='#'><%= image_tag("info-button.png", id:"info_roof", class:"info-logo", size: "30") %>
             <%= select_tag('roof-angle', options_for_select([['33 degrees', '33'], ['10 degrees', '10'],
                                                              ['14 degrees', '14'], ['18 degrees', '18'],
                                                              ['22 degrees', '22'], ['26 degrees', '26'],
@@ -35,13 +35,13 @@
 
       <h5 id="text-select azimuth-text">Select azimuth angle</h5>
       <div class="select azimuth-angle select-box" id="azimuth-angle-div">
-            <a class='info-link' href='#'><%= image_tag("info.png", id:"info_azimuth", class:"info-logo", size: "50") %>
+            <a class='info-link' href='#'><%= image_tag("info-button.png", id:"info_azimuth", class:"info-logo", size: "30") %>
         <%= select_tag('azimuth-angle', options_for_select(@azimuth_angles)) %>
       </div>
 
       <h5 id="text-select system-size">Select system size</h5>
       <div class="select system-size select-box" id='system-size'>
-            <a class='info-link' href='#'><%= image_tag("info.png", id:"info_system", class:"info-logo", size: "50") %>
+            <a class='info-link' href='#'><%= image_tag("info-button.png", id:"info_system", class:"info-logo", size: "30") %>
         <%= select_tag('system', options_for_select(@system_capacity)) %>
       </div>
 
@@ -51,10 +51,9 @@
 
     <% end %>
   </div>
-  <%= render 'shared/solar_calculator_info' %>
 </div>
 
-<div class='col s12 m6' id='right-card'>
+<div class='col s12 m6'  id='right-card'>
   <div class='header'>
     <h4 id='result-header'>Results</h4>
   </div>
@@ -79,8 +78,9 @@
       <div class='result-box'><strong class='fade-results' id='tax-credit-text'></strong></div>
   </div>
 </div>
+  <%= render 'shared/solar_calculator_info' %>
 </div>
 <%= render 'shared/azimuth_help_card' %>
-<%= render 'shared/kwh_help_card' %>
+<%= render 'shared/kwh_help_card', :collection => @state_avg_kwh %>
 <%= render 'shared/roof_help_card' %>
 <%= render 'shared/system_help_card' %>
