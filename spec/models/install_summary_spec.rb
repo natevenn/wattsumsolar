@@ -16,7 +16,7 @@ RSpec.describe 'InstallSummary' do
       service = InstallSummary.new('CO')
       result = service.install_price_per_watt
 
-      expect(result).to eq 5791
+      expect(result).to eq 2498
     end
   end
 end

@@ -13,9 +13,9 @@ RSpec.describe 'database updater' do
     state2 = State.find_by(name: "CA")
 
     expect(state1.installs).to eq(2601)
-    expect(state1.price_per_watt).to eq(5791)
+    expect(state1.price_per_watt).to eq(2498)
     expect(state2.installs).to eq(291518)
-    expect(state2.price_per_watt).to eq(6885)
+    expect(state2.price_per_watt).to eq(4495)
     end
   end
 end
