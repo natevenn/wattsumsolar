@@ -1,10 +1,12 @@
 $(document).ready(function(){
 $('#right-card').hide()
+$('#calculator-help-card').show()
 
     $(".btn").click(function(ev){
         ev.preventDefault();
-        $('#right-card').fadeOut('slow', 0)
-        $('.results').delay(1800).fadeIn('slow', 0)
+        $('#calculator-help-card').hide()
+        $('.fade-results').fadeOut('slow', 0)
+        $('#right-card').fadeIn('slow', 0)
         var state            = $("#state").val();
         var zipcode          = $("#zip").val();
         var userKwh          = $("#kwh").val();
@@ -12,7 +14,7 @@ $('#right-card').hide()
         var azimuthAngle     = $("#azimuth-angle").val();
         var systemCapacity   = $("#system").val();
         var annualCost = acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state)
-        $('#right-card').delay(1000).fadeIn('slow', 0)
+        $('.fade-results').fadeIn('slow', 0)
     });
 });
 
@@ -113,45 +115,26 @@ function formatOutput(output){
 }
 
 function renderPayoff(text){
-  $(".years-to-payoff")
-  .replaceWith("<h5 class=years-to-payoff>Payoff time <strong>"
-               + text
-               + " years"
-               + "</strong></h5>"
-              );
+  $("#payoff-text")
+  .text(text + " years");
 }
 
 function renderPayoffWithTaxCredit(text){
-  $(".years-with-tax-credit")
-  .replaceWith("<h5 class=years-with-tax-credit>With the 30% federal tax credit<strong>"
-               + text
-               + " years"
-               + "</strong></h5>"
-              );
+  $("#tax-credit-text")
+  .text(text + " years");
 }
 
 function renderSystemCost(text){
-  $(".upfront-cost")
-  .replaceWith("<h5 class=upfront-cost>Upfront cost <strong>$"
-               + text
-               + "</strong></h5>"
-              );
+  $("#upfront-cost-text")
+  .text("$" + text);
 }
 
 function renderOffset(text){
-  $(".percentage-offset")
-  .replaceWith("<h5 class=percentage-offset>Percentage offset <strong>"
-               + text
-               + '%'
-               + "</strong></h5>"
-              );
+  $("#percentage-text")
+  .text(text + '%');
 }
 
 function renderPvOutput(text){
-  $(".pv-output")
-  .replaceWith("<h5 class=pv-output>Total system ac output <strong>"
-               + text
-               + " kilowatt hours"
-               + "</strong></h5>"
-              );
+  $("#pv-text")
+  .text(text + " kilowatt hours");
 }
