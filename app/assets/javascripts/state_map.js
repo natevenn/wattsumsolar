@@ -14,7 +14,7 @@
             data: {},
             fills: {
               'highest': '#FF6D00',
-              'mid_highest': '#FF9100',
+              'mid_highest': '#ff9100',
               'mid_lowest': '#FFAB40',
               'lowest': '#FFD180',
             }
