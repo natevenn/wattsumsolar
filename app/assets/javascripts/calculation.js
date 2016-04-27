@@ -15,6 +15,7 @@ $('#calculator-help-card').show()
         var systemCapacity   = $("#system").val();
         var annualCost = acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state)
         $('.fade-results').fadeIn('slow', 0)
+        debugger
     });
 });
 
@@ -34,6 +35,7 @@ function acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, sta
       renderOffset(percentageOffset)
       formatOutput(annualAcOutput)
       totalSystemCost(userKwh, state, systemCapacity)
+      debugger
     }.bind(this)
   });
 }
@@ -44,6 +46,7 @@ function totalSystemCost(userKwh, state, systemCapacity) {
               var avgCostPw = response[state]['price_per_watt']
               var totalSystemCost = calculateTotalSystemCost(userKwh, avgCostPw, systemCapacity, state)
               renderSystemCost(totalSystemCost)
+              debugger
             })
 }
 
@@ -52,6 +55,7 @@ function calculateTotalSystemCost(userKwh, avgCostPw, systemCapacity, state) {
   var toDollars = systemCost.toLocaleString()
   annualElecCost(userKwh, state, systemCost)
   return toDollars
+  debugger
 }
 
 function annualElecCost(userKwh, state, systemCost) {
@@ -60,6 +64,7 @@ function annualElecCost(userKwh, state, systemCost) {
             function(response){
               var avgElecCost = response['series'][0]['data'][0][1]
               calculateAnnualCost(userKwh, avgElecCost, systemCost)
+              debugger
             })
 }
 
@@ -76,6 +81,7 @@ function calculateYearsToPayoff(i, u) {
   while (total < u){
     total += i * Math.pow((apr), count)
     count++
+        debugger
   }
   renderPayoff(count)
   calculatePayoffWithTaxCredit(i, u)

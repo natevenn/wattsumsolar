@@ -1,11 +1,29 @@
 <div class='explainations'  id="kwh-help-card">
+  <a class='cancel-button' href='#'><%= image_tag("cancel-button.png", id:"cancel-button", class:"cancel-logo", size: "20") %></a>
   <h5 class="help-header">The Solar Calculator</h5><br>
 
   <h6 class="help-header">What are Kilowatt Hours?</h6>
     <p class="help-text">
       Electricity is measured in kilowatt‐hours (kWh). One kWh of energy is equal to 1000 watt hours and will power a 100 watt light bulb  
+
        for 10 hours (100 watts x 10 hours = 1,000 watt‐hours = 1 kWh). To find out your annual KWh, visit your utility companies website and search under your account for annual KWh.
     </p>
-
-</div>
-
+    <br>
+    <div class='state-kwh-table'>
+    <table class='bordered'>
+      <thead>
+        <tr>
+          <th data-field="id">State</th>
+          <th data-field="name">Average kilowatts per household</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @state_avg_kwh.each do |state| %>
+          <tr>
+            <td><%= state[0] %></td>
+            <td><%= state[1] %></td>
+          </tr>
+        <% end %>
+    </table>
+    </div>
+  </div>

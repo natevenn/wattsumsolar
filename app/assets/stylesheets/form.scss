@@ -24,7 +24,6 @@ background-color: #0079c2;
   height: 300px;
   background: transparent;
   position:absolute;
-
   top: 170px;
   left: 0;
   right: 0;
@@ -45,7 +44,7 @@ background-color: #0079c2;
   display: block;
   padding: 1.2em 1.2em 1.2em 1.2em;
   margin: 10px;
-  background: #0079c2;
+  background: #2196F3;
   border-radius: 5px;
   color: white;
   line-height: normal;
@@ -56,6 +55,7 @@ background-color: #0079c2;
   width: 300px;
   height: 50px;
 }
+
 .select-box {
   margin: auto;
   position: relative;
@@ -66,7 +66,7 @@ background-color: #0079c2;
   top: 15%;
 }
 .welcome-text {
-  color: #0079c2;
+  color: #2196F3;
 }
 
 .azmuith-angle {
@@ -109,13 +109,13 @@ background-color: #0079c2;
   left: 0;
   margin: auto;
   padding: 12px;
-  /*opacity: 0.80;*/
+  opacity: 0.80;
   border-radius: 15px;
   position: fixed;
   width: 50%;
   min-width: 300px;
   height: 400px;
-  background: #FCF4DC;
+  background: #BBDEFB;
   z-index: 15;
   display: none;
   text-align: center;
@@ -125,7 +125,7 @@ background-color: #0079c2;
  .help-text .help-header {
   font-family: 'Roboto Slab', "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 700;
-  color: #CB4B19;
+  color: #FFFFFF;
   font-size: 1.75em;
   margin-bottom: .4em;
 }
@@ -137,11 +137,13 @@ background-color: #0079c2;
   padding: 12px;
   opacity: 0.80;
   border-radius: 15px;
+  border-style: solid;
+  border-color: #FF5722;
   position: relative;
   width: 50%;
   min-width: 300px;
   height: 400px;
-  background: #FCF4DC;
+  background: #FFFFFF;
   z-index: 15;
   display: none;
   text-align: center;
@@ -152,9 +154,9 @@ background-color: #0079c2;
   /*color: white;*/
   /*font-size: .8em;*/
 /*}*/
-/*.help-header {*/
-  /*color: white;*/
-/*}*/
+.help-header {
+  color: #FF9800;
+}
 
 .text-select {
   display: inline;
@@ -171,21 +173,25 @@ background-color: #0079c2;
   right: 37px;
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #info_roof {
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #info_azimuth {
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #info_system {
   display: inline;
   float: left;
+  margin-right: 10px;
 }
 
 #zipcode {
@@ -233,4 +239,14 @@ background-color: #0079c2;
 
 .result-box {
   display: inline;
+}
+
+.state-kwh-table {
+  text-align: center;
+}
+
+#cancel-button {
+  position: static;
+  float: right;
+  /*margin-right: 300px;*/
 }
