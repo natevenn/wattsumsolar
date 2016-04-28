@@ -23,6 +23,13 @@
         1,
         null
       ],
+      "/Users/Nate/turing/3module/projects/wattsumsolar/app/controllers/welcome_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/Nate/turing/3module/projects/wattsumsolar/app/helpers/state_avg_kwh.rb": [
         1,
         1,
@@ -357,15 +364,8 @@
         null,
         null,
         null
-      ],
-      "/Users/Nate/turing/3module/projects/wattsumsolar/app/controllers/welcome_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1461858299
+    "timestamp": 1461858646
   }
 }
