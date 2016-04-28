@@ -39,4 +39,12 @@ $(document).ready(function(){
         $('#system-help-card').hide();
         $('#calculator-help-card').show();
     })
+
+    $(".nav-get-started").on("click", function() {
+        $('#get-started-link').hide();
+    })
+
+    $("#logo-link").on("click", function() {
+        $('#get-started').show();
+    })
 })

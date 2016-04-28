@@ -1,6 +1,6 @@
 #us-map {
   position: relative;
-  left: -150px;
+  left: -190px;
   padding-right: 300px;
 }
 .hoverinfo {
@@ -10,4 +10,31 @@
 #welcome {
   position: relative;
   right: -300px;
+}
+
+.homepage-info {
+  position: relative;
+  left: -170px;
+  margin-top: 100px;
+  margin-left: 30px;
+  margin-right: 10px;
+  bottom: 15%;
+  opacity: 0.80;
+  border-radius: 15px;
+  width: 300px;
+  min-width: 100px;
+  height: 400px;
+  /*background: #BBDEFB;*/
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.welcome-header {
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+}
+
+#welcome-text {
+  color: #2196F3;
 }
