@@ -45,7 +45,13 @@ function acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, sta
     type: 'GET',
     success: function(response){
       var annualAcOutput = response.outputs.ac_annual
+      var monthlyAcOutput = response.outputs.ac_monthly
       var percentageOffset = calculatePercentageOffset(annualAcOutput, userKwh)
+      var bardata = $.map(monthlyAcOutput, function(month) {
+        month = (Math.round(month));
+        return month
+      });
+      chartMonthlyOutput(bardata)
       renderOffset(percentageOffset)
       formatOutput(annualAcOutput)
       totalSystemCost(userKwh, state, systemCapacity)
