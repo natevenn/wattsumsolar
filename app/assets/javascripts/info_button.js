@@ -8,17 +8,17 @@ $(document).ready(function(){
 
     $("#info_roof").on('click', function() {
         $('#roof-help-card').show();
-        $('#calculator-help-card').toggle();
+        $('#calculator-help-card').hide();
     })
 
     $("#info_azimuth").on('click', function() {
         $('#azimuth-help-card').show();
-        $('#calculator-help-card').toggle();
+        $('#calculator-help-card').hide();
     })
 
     $("#info_system").on('click', function() {
         $('#system-help-card').show();
-        $('#calculator-help-card').toggle();
+        $('#calculator-help-card').hide();
     })
 
     $(".cancel-button").on('click', function() {
@@ -28,15 +28,15 @@ $(document).ready(function(){
 
     $(".cancel-button").on('click', function() {
         $('#roof-help-card').hide();
-        $('#calculator-help-card').toggle();
+        $('#calculator-help-card').show();
     })
     $(".cancel-button").on('click', function() {
         $('#azimuth-help-card').hide();
-        $('#calculator-help-card').toggle();
+        $('#calculator-help-card').show();
     })
 
     $(".cancel-button").on("click", function() {
         $('#system-help-card').hide();
-        $('#calculator-help-card').toggle();
+        $('#calculator-help-card').show();
     })
 })
