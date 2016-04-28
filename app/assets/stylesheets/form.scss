@@ -1,7 +1,7 @@
 #left-card {
   position: relative;
   right: 30px;
-  margin-top: -50px;
+  margin-top: 20px;
 }
 #right-card {
   position: relative;
@@ -140,6 +140,7 @@ background-color: #0079c2;
   border-style: solid;
   border-color: #FF5722;
   position: relative;
+  margin-top: 30;
   width: 50%;
   min-width: 300px;
   height: 600px;
@@ -149,6 +150,28 @@ background-color: #0079c2;
   text-align: center;
   overflow-y: scroll;
 }
+
+.homepage-info {
+  bottom: 15%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 12px;
+  opacity: 0.80;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #FF5722;
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+  height: 600px;
+  background: #FFFFFF;
+  display: none;
+  z-index: 15;
+  text-align: center;
+  overflow-y: scroll;
+}
+
 
 /*.help-text {*/
   /*color: white;*/
