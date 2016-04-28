@@ -144,8 +144,8 @@ background-color: #0079c2;
   min-width: 300px;
   height: 400px;
   background: #FFFFFF;
-  z-index: 15;
   display: none;
+  z-index: 15;
   text-align: center;
   overflow-y: scroll;
 }
@@ -248,10 +248,4 @@ background-color: #0079c2;
 #cancel-button {
   position: static;
   float: right;
-  /*margin-right: 300px;*/
-}
-.inactive {
-  height: 0;
-  width: 0;
-  opacity: 0;
 }

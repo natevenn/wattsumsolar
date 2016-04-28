@@ -4,16 +4,30 @@ $('#calculator-help-card').show()
 
     $(".btn").click(function(ev){
         ev.preventDefault();
-        $('#calculator-help-card').hide().addClass('inactive')
+        $('#calculator-help-card').hide()
         $('.fade-results').fadeOut('slow', 0)
         $('#right-card').fadeIn('slow', 0)
         //$('#right-card').addClass('active')
+        var numberReg =  /^[0-9]+$/;
         var state            = $("#state").val();
         var zipcode          = $("#zip").val();
         var userKwh          = $("#kwh").val();
         var roofAngle        = $("#roof-angle").val();
         var azimuthAngle     = $("#azimuth-angle").val();
         var systemCapacity   = $("#system").val();
+
+        $('.error').hide();
+        if(zipcode == "") {
+            $("#zip").after('<span class="error">Please enter your zipcode</span>');
+        } else if(!numberReg.test(zipcode)) {
+            $("#zip").after('<span class="error">Numbers only</span>');
+        }
+        if(userKwh == "") {
+            $("#kwh-div").after('<span class="error">Please enter your annual kilowatt hours</span');
+        } else if(!numberReg.test(userKwh)) {
+            $("#kwh-div").after('<span class="error">Numbers only</span>');
+        }
+
         var annualCost = acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state)
         $('.fade-results').fadeIn('slow', 0)
     });
