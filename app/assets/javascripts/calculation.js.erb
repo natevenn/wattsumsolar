@@ -8,13 +8,13 @@ $('#calculator-help-card').show()
         $('.fade-results').fadeOut('slow', 0)
         $('#right-card').fadeIn('slow', 0)
         //$('#right-card').addClass('active')
-        var numberReg =  /^[0-9]+$/;
         var state            = $("#state").val();
         var zipcode          = $("#zip").val();
         var userKwh          = $("#kwh").val();
         var roofAngle        = $("#roof-angle").val();
         var azimuthAngle     = $("#azimuth-angle").val();
         var systemCapacity   = $("#system").val();
+        var numberReg        =  /^[0-9]+$/;
 
         $('.error').hide();
         if(zipcode == "") {
@@ -35,7 +35,7 @@ $('#calculator-help-card').show()
 
 function acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state) {
   $.ajax({
-    url: "https://developer.nrel.gov/api/pvwatts/v5.json?api_key=JTA78ioyrPZ2AEfxYmqa4UttsokMGxXgXI48L6rF&address="
+    url: "https://developer.nrel.gov/api/pvwatts/v5.json?api_key=<%= ENV['NREL_API_KEY'] %>&address="
     + zipcode
     + "&tilt=" + roofAngle
     + "&azimuth=" + azimuthAngle
@@ -70,7 +70,7 @@ function calculateTotalSystemCost(userKwh, avgCostPw, systemCapacity, state) {
 }
 
 function annualElecCost(userKwh, state, systemCost) {
-  $.getJSON("http://api.eia.gov/series/?api_key=EC28B206A1F13B7ABC5601F247D40844&series_id=ELEC.PRICE."
+  $.getJSON("http://api.eia.gov/series/?api_key=<%= ENV['EIA_API_KEY'] %>&series_id=ELEC.PRICE."
             + state + "-RES.A",
             function(response){
               var avgElecCost = response['series'][0]['data'][0][1]
