@@ -1,17 +1,18 @@
 function chartMonthlyOutput(bardata) {
-    debugger
-    var margin = { top: 30, right: 30, bottom: 40, left:50 }
+    var margin = { top: 40, right: 40, bottom: 50, left:60 }
 
-    var height = 400 - margin.top - margin.bottom,
-        width = 600 - margin.left - margin.right,
+    var height = 350 - margin.top - margin.bottom,
+        width = 550 - margin.left - margin.right,
         barWidth = 50,
         barOffset = 5;
+
+    var xdata = [{data: 'Jan'}, {data: 'Feb'}, {data: 'Mar'}, {data: 'Apr'}, {data: 'May'}, {data: 'Jun'}, {data: 'Jul'}, {data: 'Aug'}, {data: 'Sep'}, {data: 'Oct'}, {data: 'Nov'}, {data: 'Dec'}]
 
     var tempColor;
 
     var colors = d3.scale.linear()
     .domain([0, bardata.length*.33, bardata.length*.66, bardata.length])
-    .range(['steelblue'])
+    .range(['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78'])
 
     var yScale = d3.scale.linear()
             .domain([0, d3.max(bardata)])
@@ -58,7 +59,7 @@ function chartMonthlyOutput(bardata) {
             tempColor = this.style.fill;
             d3.select(this)
                 .style('opacity', .5)
-                .style('fill', 'yellow')
+                //.style('fill', 'yellow')
         })
 
         .on('mouseout', function(d) {
@@ -101,7 +102,7 @@ function chartMonthlyOutput(bardata) {
         .scale(xScale)
         .orient('bottom')
         .tickValues(xScale.domain().filter(function(d, i) {
-            return !(i % (bardata.length/5));
+            return xdata;
         }))
 
     var hGuide = d3.select('svg').append('g')

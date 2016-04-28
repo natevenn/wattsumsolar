@@ -7,6 +7,7 @@ $('#calculator-help-card').show()
         $('#calculator-help-card').hide()
         $('.fade-results').fadeOut('slow', 0)
         $('#right-card').fadeIn('slow', 0)
+        d3.select('#chart').select('svg').remove();
         //$('#right-card').addClass('active')
         var state            = $("#state").val();
         var zipcode          = $("#zip").val();
