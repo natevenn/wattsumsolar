@@ -1,5 +1,4 @@
 $(document).ready(function(){
-        //$('#kwh-help-card').hide();
 
     $("#info_kwh").on('click', function() {
         $('#kwh-help-card').show();
