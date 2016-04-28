@@ -4,7 +4,7 @@
             geographyConfig: {
               highlightBorderColor: '#2176C7',
               popupTemplate: function(geo, data) {
-                  return "<div class='hoverinfo'>" +  geo.properties.name + '<br>' + ' Solar Installs: ' +  formatNumber(data.installs) +  "</div>";
+                  return "<div class='hoverinfo'>" +  geo.properties.name + '<br>' + ' Solar Installs: ' +  formatNumber(data.installs) + "</div>";
               },
               highlightOnHover: true,
               borderColor: '#444',
@@ -23,4 +23,9 @@
 function formatNumber(num){
     return num.toLocaleString()
 }
+//function formatPrice(num) {
+  //var v = num/Math.pow(10, 3);
+  //var l = Math.round(v, -2);
+    //return "$" + l
+//}
 

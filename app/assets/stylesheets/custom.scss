@@ -151,38 +151,13 @@ background-color: #0079c2;
   overflow-y: scroll;
 }
 
-.homepage-info {
-  bottom: 15%;
-  right: 0;
-  left: 0;
-  margin: auto;
-  padding: 12px;
-  opacity: 0.80;
-  border-radius: 15px;
-  border-style: solid;
-  border-color: #FF5722;
-  position: relative;
-  width: 50%;
-  min-width: 300px;
-  height: 600px;
-  background: #FFFFFF;
-  display: none;
-  z-index: 15;
-  text-align: center;
-  overflow-y: scroll;
-}
-
-
-/*.help-text {*/
-  /*color: white;*/
-  /*font-size: .8em;*/
-/*}*/
 .help-header {
   color: #FF9800;
 }
 
 .text-select {
   display: inline;
+  color: #2196F3;
 }
 
 #kwh-text {
@@ -218,7 +193,7 @@ background-color: #0079c2;
 }
 
 #zipcode {
-  max-width: 15vw;
+  max-width: 23vw;
 }
 
 #kwh {
@@ -233,7 +208,7 @@ background-color: #0079c2;
   height: 2rem;
 }
 #kwh-div {
-  max-width: 15vw;
+  max-width: 23vw;
 }
 
 #roof-angle-div {
