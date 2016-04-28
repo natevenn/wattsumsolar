@@ -17,7 +17,6 @@ RSpec.describe 'States' do
     expect(body['AL']['installs']).to eq 2601
     expect(body['NY']['installs']).to eq 1601
     expect(body['CA']['installs']).to eq 22101
-    expect(body['AL']['price_per_watt']).to eq 5791
     expect(body['NY']['price_per_watt']).to eq 6783
     expect(body['CA']['price_per_watt']).to eq 8722
   end

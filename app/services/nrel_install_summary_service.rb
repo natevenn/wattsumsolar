@@ -6,16 +6,9 @@ class NrelInstallSummaryService
     connection.params['api_key'] = ENV['NREL_API_KEY']
   end
 
-  def install_summary_by_zipcode(zipcode)
-    parse(connection.get("?zipcode=#{zipcode}"))
-  end
 
   def install_summary_by_state(state)
     parse(connection.get("?state=#{state}"))
-  end
-
-  def price_per_watt(state)
-    parse(connection.get("?state=#{state}&mindate=07728"))
   end
 
   private
