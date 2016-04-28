@@ -7,6 +7,7 @@ $('#calculator-help-card').show()
         $('#calculator-help-card').hide()
         $('.fade-results').fadeOut('slow', 0)
         $('#right-card').fadeIn('slow', 0)
+        d3.select('#chart').select('svg').remove();
         //$('#right-card').addClass('active')
         var state            = $("#state").val();
         var zipcode          = $("#zip").val();
@@ -45,7 +46,13 @@ function acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, sta
     type: 'GET',
     success: function(response){
       var annualAcOutput = response.outputs.ac_annual
+      var monthlyAcOutput = response.outputs.ac_monthly
       var percentageOffset = calculatePercentageOffset(annualAcOutput, userKwh)
+      var bardata = $.map(monthlyAcOutput, function(month) {
+        month = (Math.round(month));
+        return month
+      });
+      chartMonthlyOutput(bardata)
       renderOffset(percentageOffset)
       formatOutput(annualAcOutput)
       totalSystemCost(userKwh, state, systemCapacity)
