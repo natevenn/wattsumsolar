@@ -1,6 +1,6 @@
 class State < ActiveRecord::Base
   include StateRank
-
+# use j builder to format this data
   def self.format_data
     all.map.with_object({}) do |state, hash|
       hash[state.name] = { 'fillKey'        => state.rank,
