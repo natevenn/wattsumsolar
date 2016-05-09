@@ -249,7 +249,17 @@ background-color: #0079c2;
 }
 
 .graph-title {
-  text-align: center;
-  margin-top: 20px;
+  position: relative;
+  left: 75px;
   color: #CB4B19;
+}
+
+#graph-header {
+  position: relative;
+  left: 180px;
+  color: #CB4B19;
+}
+
+#months {
+  transform: rotate(7deg);
 }
