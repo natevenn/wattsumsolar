@@ -6,6 +6,8 @@
 WattSumSolar is a rails app that uses solar data from the National Renewable Energy Laboratory, to calculate the upfront cost of a solar system, total electricity output of the system, the percentage of the systems offset based on the homeowners current electricity usage, and a graph that shows monthly electricity output. The app is mostly build on the client side, utilizing JavaScript, and a D3 library.
 
 Production is hosted [here](http://wattsumsolar.herokuapp.com).
+### Testing
+All testing in Crashatmypad was done via [RSpec-rails](https://github.com/rspec/rspec-rails). The coverage was tested using [simplecov](https://github.com/colszowka/simplecov).
 
 ##### Running tests
 Once you have the repo cloned, make sure to reset the database on your local machine and run bundle install.
