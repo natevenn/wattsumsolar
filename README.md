@@ -7,5 +7,18 @@ WattSumSolar is a rails app that uses solar data from the National Renewable Ene
 
 Production is hosted [here](http://wattsumsolar.herokuapp.com).
 
+##### Running tests
+Once you have the repo cloned, make sure to reset the database on your local machine and run bundle install.
+
+In order to run the tests, enter `rspec` in the command line.
+
+If you would like to run a specific test enter, the whole path of that test, preceeded by the rspec command: ie. 
+
+```
+rspec spec/models/pv_watt_spec.rb
+```
+
+In order to see coverage for the testing suite simply type the command `open coverage/index.html` and it will show the index page for our simple cov code coverage. 
+
 
 
