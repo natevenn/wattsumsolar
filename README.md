@@ -7,7 +7,7 @@ WattSumSolar is a rails app that uses solar data from the National Renewable Ene
 
 Production is hosted [here](http://wattsumsolar.herokuapp.com).
 ### Testing
-All testing in Crashatmypad was done via [RSpec-rails](https://github.com/rspec/rspec-rails). The coverage was tested using [simplecov](https://github.com/colszowka/simplecov).
+All testing in Wattsumsolar was done via [RSpec-rails](https://github.com/rspec/rspec-rails). The coverage was tested using [simplecov](https://github.com/colszowka/simplecov).
 
 ##### Running tests
 Once you have the repo cloned, make sure to reset the database on your local machine and run bundle install.
