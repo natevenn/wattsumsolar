@@ -29,7 +29,7 @@ $('#calculator-help-card').show()
             $("#kwh-div").after('<span class="error">Numbers only</span>');
         }
 
-        var annualCost = acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state)
+        acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state)
         $('.fade-results').fadeIn('slow', 0)
     });
 });
