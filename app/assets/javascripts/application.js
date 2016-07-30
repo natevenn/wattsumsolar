@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require d3
+//= require maps/d3
 //= require topojson
-//= require datamaps
+//= require maps/datamaps
 //= require_tree .
