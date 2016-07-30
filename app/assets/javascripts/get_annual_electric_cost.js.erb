@@ -1,9 +1,9 @@
-function annualElecCost(userKwh, state, systemCost) {
+function annualElecCost(userKwh, state, systemCost, percentageOffset) {
   $.getJSON("http://api.eia.gov/series/?api_key=<%= ENV['EIA_API_KEY'] %>&series_id=ELEC.PRICE."
             + state + "-RES.A",
             function(response){
               var avgElecCost = response['series'][0]['data'][0][1]
-              calculateAnnualCost(userKwh, avgElecCost, systemCost)
+              calculateAnnualCost(userKwh, avgElecCost, systemCost, percentageOffset)
             })
 }
 
