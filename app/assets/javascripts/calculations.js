@@ -2,7 +2,7 @@ function calculatePayoffWithTaxCredit(i, u) {
     var afterTaxCredit = (u - Math.round(u * 0.3))
     var count = 0
     var total = 0
-    var apr   = 1.045
+    var apr   = 1.04
     while (total < afterTaxCredit) {
         total += i * Math.pow((apr), count)
         count++
@@ -21,9 +21,10 @@ function calculateYearsToPayoff(annualCost, systemCost, percentageOffset) {
   console.log('this is system cost -' + systemCost)
   var count = 0
   var total = 0
-  var apr   = 1.045
+  var apr   = 1.04
   while (total < systemCost){
     total += annualCost * Math.pow((apr), count)
+    console.log(total)
     count++
   }
   renderPayoff(count)
