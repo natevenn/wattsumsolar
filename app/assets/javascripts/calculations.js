@@ -15,26 +15,27 @@ function calculatePercentageOffset(pvOutput, userKwh) {
   return num
 }
 
-function calculateYearsToPayoff(annualCost, systemCost, percentageOffset) {
-  console.log('this is percentage -' + percentageOffset)
-  console.log('this is annual cost -' + annualCost)
-  console.log('this is system cost -' + systemCost)
+function calculateYearsToPayoff(acCost, systemCost, percentageOffset) {
+  //console.log('this is percentage -' + percentageOffset)
+  console.log('this is annual cost - ' + acCost)
+  //console.log('this is system cost -' + systemCost)
   var count = 0
   var total = 0
   var apr   = 1.04
   while (total < systemCost){
-    total += annualCost * Math.pow((apr), count)
-    console.log(total)
+    total += acCost * Math.pow((apr), count)
+    console.log('this is total ' + total)
     count++
   }
   renderPayoff(count)
-  calculatePayoffWithTaxCredit(annualCost, systemCost)
+  calculatePayoffWithTaxCredit(acCost, systemCost)
 }
 
 function calculateAnnualCost(userKwh, avgElecCost, systemCost, percentageOffset) {
-  var annualCost = (userKwh * (avgElecCost / 100))
-  calculateYearsToPayoff(annualCost, systemCost, percentageOffset)
-  return 'annual electricity costs: ' + annualCost
+  var acCostBasedOnSystemSize = ((userKwh * (percentageOffset / 100)) * (avgElecCost / 100))
+  //var acTotal = userKwh * (avgElecCost / 100)
+  calculateYearsToPayoff(acCostBasedOnSystemSize, systemCost, percentageOffset)
+  //calculateYearsToPayoff(acTotal, systemCost, percentageOffset)
 }
 
 function calculateTotalSystemCost(userKwh, avgCostPw, systemCapacity, state, percentageOffset) {
