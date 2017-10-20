@@ -1,0 +1,25 @@
+function acAnnual(zipcode, roofAngle, azimuthAngle, systemCapacity, userKwh, state) {
+  $.ajax({
+    url: "https://developer.nrel.gov/api/pvwatts/v5.json?api_key=<%= ENV['NREL_API_KEY'] %>&address="
+    + zipcode
+    + "&tilt=" + roofAngle
+    + "&azimuth=" + azimuthAngle
+    + "&system_capacity=" + systemCapacity
+    + "&array_type=1&module_type=1&losses=15",
+    dataType: 'json',
+    type: 'GET',
+    success: function(response){
+      var annualPvOutput = response.outputs.ac_annual
+      var monthlyAcOutput = response.outputs.ac_monthly
+      var percentageOffset = calculatePercentageOffset(annualPvOutput, userKwh)
+      var bardata = $.map(monthlyAcOutput, function(month) {
+        month = (Math.round(month));
+        return month
+      });
+      chartMonthlyOutput(bardata)
+      renderOffset(percentageOffset)
+      formatOutput(annualPvOutput)
+      totalSystemCost(userKwh, state, systemCapacity, percentageOffset)
+    }.bind(this)
+  });
+}
